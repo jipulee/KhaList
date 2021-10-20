@@ -1,3 +1,9 @@
+/*=================================================================================
+* Author: Jipu Li
+* Copyright (c) 2021, KhaliCode
+* All right reserved.
+* =================================================================================*/
+
 import Layout from '../comps/Layout'
 import '../styles/globals.css'
 
