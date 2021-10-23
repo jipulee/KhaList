@@ -1,4 +1,5 @@
 import styles from '../../styles/Khas.module.css'
+import Link from 'next/link'
 
 export const getStaticProps = async () =>{
     const res = await fetch('https://jsonplaceholder.typicode.com/users')
@@ -9,17 +10,16 @@ export const getStaticProps = async () =>{
     }
 }
 
-
 const Khalisting = ( {khas} ) => {
     return ( 
         <div>
             <h1>Kha Listing</h1>
             {khas.map(kha => (
-                <div key={kha.id}>
+                <Link href={'./kha/'+kha.id}  key={kha.id}>
                     <a className={styles.single}>
                         <h3> {kha.name} </h3>
                     </a>
-                </div>
+                </Link>
             ))}
         </div>
      );
